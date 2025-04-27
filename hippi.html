@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hippilande Farm - Organic Family Experience in Finland</title>
+    <meta name="description" content="Visit our organic family farm in Finland for a unique hippie-style experience with animals, nature activities, and sustainable living.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Colors */
+        :root {
+            --primary-color: #7a9e7e; /* Soft forest green */
+            --secondary-color: #d9b166; /* Warm gold */
+            --accent-color: #c45d3e; /* Earthy terracotta */
+            --light-color: #f9f3e9; /* Cream */
+            --dark-color: #433a3f; /* Deep brown */
+        }
+        
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Amatic SC', cursive;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            font-size: 4rem;
+        }
+        
+        h2 {
+            font-size: 3rem;
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            font-size: 2.2rem;
+            color: var(--accent-color);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-family: 'Amatic SC', cursive;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1500076656116-558758c991c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-family: 'Amatic SC', cursive;
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .logo::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 6px;
+            background-color: var(--secondary-color);
+            bottom: 10px;
+            left: 0;
+            z-index: -1;
+        }
+        
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 10px 0;
+            transition: all 0.4s ease;
+        }
+        
+        nav.transparent {
+            background-color: transparent;
+            box-shadow: none;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            font-family: 'Amatic SC', cursive;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark-color);
+            position: relative;
+        }
+        
+        .nav-links a::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark-color);
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 30px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Activities Section */
+        .activities {
+            padding: 100px 0;
+            background-color: var(--light-color);
+        }
+        
+        .activities h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .activity-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .activity-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .activity-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .activity-card:hover .activity-img img {
+            transform: scale(1.1);
+        }
+        
+        .activity-content {
+            padding: 20px;
+        }
+        
+        .activity-content h3 {
+            margin-bottom: 10px;
+        }
+        
+        /* Animals Section */
+        .animals {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .animals h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .animals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .animal-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: var(--light-color);
+            transition: all 0.3s ease;
+        }
+        
+        .animal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .animal-img {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .animal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 0;
+            background-color: var(--light-color);
+        }
+        
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+            gap: 15px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        /* Events Section */
+        .events {
+            padding: 100px 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .events h2 {
+            margin-bottom: 3rem;
+        }
+        
+        .event-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .event-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 10px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid var(--secondary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+            text-align: right;
+        }
+        
+        .right {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .left::after {
+            right: -12px;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .event-content {
+            padding: 20px;
+            background-color: var(--light-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .event-date {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 50px;
+        }
+        
+        .contact-info h3 {
+            color: var(--secondary-color);
+        }
+        
+        .info-item {
+            margin-bottom: 30px;
+        }
+        
+        .info-item h4 {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        input::placeholder, textarea::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        button[type="submit"] {
+            align-self: flex-start;
+        }
+        
+        /* Map */
+        .map {
+            height: 400px;
+            background-color: var(--light-color);
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 50px 0 20px;
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            margin: 0 10px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            header {
+                height: 80vh;
+            }
+            
+            .nav-links {
+                position: absolute;
+                right: 0;
+                top: 70px;
+                background-color: white;
+                height: 100vh;
+                width: 70%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+                z-index: 999;
+                padding: 50px 0;
+            }
+            
+            .nav-links li {
+                margin: 20px 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-active {
+                transform: translateX(0%);
+            }
+            
+            .toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            
+            .toggle .line2 {
+                opacity: 0;
+            }
+            
+            .toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+            
+            .event-timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 18px;
+            }
+            
+            .left, .right {
+                left: 0;
+                text-align: left;
+            }
+        }
+		.about-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px; /* optional */
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px; /* match the style if needed */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">Hippilande</a>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#animals">Animals</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Visit Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1 class="logo">Hippilande Farm</h1>
+        <p>Koe luonnon taika ja luo yhteys eläimiin luomuperhetilallamme Suomen maaseudun sydämessä.</p>
+        <a href="#contact" class="btn">Suunnittele vierailusi</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Meidän tarinamme</h2>
+                <p>Tervetuloa Hippilandeen, perheomisteiselle tilalle, joka sijaitsee rauhallisessa Suomen maaseudussa. Uskomme elämään sopusoinnussa luonnon kanssa, maan kunnioittamiseen ja tämän kauniin elämäntavan jakamiseen muiden kanssa.</p>
+                <p>Vuodesta 2005 lähtien olemme avanneet porttimme perheille, jotka haluavat paeta kaupunkielämän kiireitä ja löytää uudelleen luonnon yksinkertaiset ilot. Tilamme toimii luomuperiaatteiden, kestävyyden ja syvän elämänrakkauden pohjalta.</p>
+                <p>Hippilandessa tarjoamme enemmän kuin pelkän maatilavierailun – meillä pääset mukaan elämykselliseen kokemukseen, jossa voit ruokkia eläimiä, kerätä tuoreita munia, oppia luomuviljelystä ja löytää uudelleen yksinkertaisen ja tietoisen elämänilon.</p>
+                <a href="#activities" class="btn">Tutustu aktiviteetteihimme</a>
+            </div>
+            <div class="about-image">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="test.mp4" type="video/mp4">
+                    Selaimesi ei tue videota.
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <h2>Maatilakokemukset</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1663090573602-5dcd0f935d94?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Feeding Animals">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Eläinten ruokinta</h3>
+                        <p>Tule auttamaan meitä ystävällisten maatilaeläintemme ruokinnassa ja opi samalla niiden ruokavaliosta ja käyttäytymisestä. Käytännönläheinen kokemus, jota lapset rakastavat!</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-img">
+                        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Collecting Eggs">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Munien keruu</h3>
+                        <p>Vieraile vapaasti kulkevien kanojemme kanalassa ja kerää tuoreita munia. Opi kestävästä kananpidosta ja maatilalta pöytään -elämäntavan ilosta.</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-img">
+                        <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Organic Gardening">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Luomupuutarhanhoito</h3>
+                        <p>Upota kätesi multaan luomuvihannespuutarhassamme. Istuta siemeniä, kitke rikkaruohoja ja korjaa kauden vihanneksia samalla kun opit kestävän viljelyn käytäntöjä.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animals Section -->
+    <section id="animals" class="animals">
+        <div class="container">
+            <h2>Tapaa eläimemme</h2>
+            <div class="animals-grid">
+                <div class="animal-card">
+                    <div class="animal-img">
+                        <img src="https://images.unsplash.com/photo-1728326853117-28d58ea8a8fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Q0hJS0VOU3xlbnwwfHwwfHx8MA%3D%3D" alt="Chicken">
+                    </div>
+                    <h3>Vapaasti kulkevat kanat</h3>
+                    <p>Iloiset kanamme liikkuvat vapaasti päivän aikana, syöden hyönteisiä ja kasveja. Ne tarjoavat meille herkullisia luomumunia joka päivä.</p>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-img">
+                        <img src="https://images.unsplash.com/photo-1511885663737-eea53f6d6187?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="lama">
+                    </div>
+                    <h3>Leikkisät laamat</h3>
+                    <p>Laamamme ovat oikeita persoonia! Ne rakastavat touhuta, tutkia ympäristöään ja olla vuorovaikutuksessa vieraiden kanssa. Ne auttavat meitä pitämään laitumet kunnossa luonnollisesti.</p>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-img">
+                        <img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sheep">
+                    </div>
+                    <h3>Villaiset lampaat</h3>
+                    <p>Suomalaiset lampamme antavat meille villaa, jota käytämme käsityöpajoissamme. Ne ovat lempeitä ja rakastavat rapsutuksia.</p>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-img">
+                        <img src="https://images.unsplash.com/photo-1535241749838-299277b6305f?q=80&w=1946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Rabbits">
+                    </div>
+                    <h3>Suloiset kanit</h3>
+                    <p>Kanimme ovat lasten suosikkeja. Ne ovat pehmeitä, ystävällisiä ja aina innoissaan puutarhamme tuoreista vihanneksista.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Maatilan elämää -galleria</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Farm Landscape">
+                    <div class="gallery-overlay">
+                        <h3>Kaunis tilamme</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Organic Vegetables">
+                    <div class="gallery-overlay">
+                        <h3>Luomusato</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1679198488819-cd5775701a5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+					   alt="Kids with Animals">
+                    <div class="gallery-overlay">
+                        <h3>Uusien ystävienkohtaaminen</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Farm Workshop">
+                    <div class="gallery-overlay">
+                        <h3>Yhdessä oppien</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <h2>Tulevat tapahtumat</h2>
+            <div class="event-timeline">
+                <div class="timeline-item left">
+                    <div class="event-content">
+                        <span class="event-date">15 toukokuuta 2025</span>
+                        <h3>Kevään istutusjuhla</h3>
+                        <p>Tule mukaan toivottamaan kevät tervetulleeksi istutuspäivän merkeissä – luvassa on istutustouhuja, siementen vaihtoa ja perinteisiä suomalaisia istutusriittejä.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="event-content">
+                        <span class="event-date">20 kesäkuuta 2025</span>
+                        <h3>Juhannusjuhla</h3>
+                        <p>Koe perinteinen suomalainen juhannus kokkojen, musiikin, tanssin ja luomutilan sadosta valmistetun juhla-aterian merkeissä.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="event-content">
+                        <span class="event-date">12.–15. heinäkuuta 2025</span>
+                        <h3>Lasten maatilaleiri</h3>
+                        <p>Nelipäiväinen leiri, jossa lapset oppivat eläinten hoitoa, luomupuutarhanhoitoa ja kestävää elämäntapaa hauskojen aktiviteettien kautta.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#contact" class="btn">Varaa tapahtuma</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Vieraile tilallamme</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h4>Aukioloajat</h4>
+                        <p>Keskiviikosta perjantaihin: klo 10.00–16.00</p>
+                        <p>Viikonloppuisin: klo 10.00–18.00</p>
+                        <p>Suljettu maanantaisin ja tiistaisin</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Sisäänpääsy</h4>
+                        <p>Aikuiset: 12 €</p>
+                        <p>Lapset (3–12 vuotta): 8 €</p>
+                        <p>Perhelippu (2 aikuista + 2 lasta): 35 €</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Sijainti</h4>
+                        <p>Hippilande Farm</p>
+                        <p>Maalaistie 123</p>
+                        <p>12345 Luontokylä, Finland</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Contact</h4>
+                        <p>Phone: +358 12 345 6789</p>
+                        <p>Email: info@hippilande.fi</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.1781304411593!2d24.86288584057598!3d60.428578525921345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468dfd2cb7b4da27%3A0x60479094275b8a08!2sHippilande%20(Hippie%20Farm)!5e0!3m2!1sen!2sfi!4v1744910137276!5m2!1sen!2sfi" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hippilande Farm</h3>
+                    <p>Kestävä perhetila, joka tarjoaa luomu­elämyksiä Suomen maaseudun sydämessä.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Pikalinkit</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">Meistä</a></li>
+                        <li><a href="#activities">Aktiviteetit</a></li>
+                        <li><a href="#animals">Eläimemme</a></li>
+                        <li><a href="#events">Taphtumat</a></li>
+                        <li><a href="#contact">Vierailutiedot</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Tilaa uutiskirjeemme saadaksesi ajankohtaisia uutisia ja tietoa erikoistapahtumista.</p>
+                    <form action="#" method="POST">
+                        <input type="email" name="email" placeholder="Your email address">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Hippilande Dhif. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                nav.classList.remove('transparent');
+            } else {
+                nav.classList.add('transparent');
+            }
+        });
+
+        // Mobile navigation toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links li');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('toggle');
+            
+            // Animate links
+            links.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('nav-active')) {
+                        navLinks.classList.remove('nav-active');
+                        hamburger.classList.remove('toggle');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
